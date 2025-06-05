@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prehistoric Settlement Sites – GIS Analysis</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      flex-direction: row;
+    }
+    .container {
+      display: flex;
+      flex: 1;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .image-viewer {
+      flex: 2;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #111;
+    }
+    .image-viewer object {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .sidebar {
+      flex: 1;
+      padding: 1.5rem;
+      background-color: #f4f4f4;
+      overflow-y: auto;
+    }
+    h1, h2 { margin-top: 0; }
+    ul { padding-left: 1.2rem; }
+    .tag {
+      display: inline-block;
+      background: #ddd;
+      border-radius: 4px;
+      padding: 2px 6px;
+      margin: 2px 4px 2px 0;
+      font-size: 0.8rem;
+    }
+    @media (max-width: 768px) {
+      body { flex-direction: column; }
+      .container { flex-direction: column; }
+      .image-viewer, .sidebar {
+        flex: none;
+        height: auto;
+      }
+      .image-viewer object { height: auto; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="image-viewer">
+      <object data="./human_settlement_map.pdf" type="application/pdf">
+        <p>Unable to display PDF file. <a href="./human_settlement_map.pdf">Download</a> instead.</p>
+      </object>
+    </div>
+    <div class="sidebar">
+      <h1>Prehistoric Settlement Analysis</h1>
+      <p>This spatial analysis investigates whether proximity to streams influenced where prehistoric humans settled, using archaeological site data near Fayetteville, NC.</p>
+
+      <h2>Tools Used</h2>
+      <span class="tag">ArcGIS</span>
+      <span class="tag">Buffer Analysis</span>
+      <span class="tag">Minimum Bounding Geometry</span>
+      <span class="tag">Spatial Join</span>
+      <span class="tag">Clip and Intersect</span>
+      <span class="tag">Chi-Square Test</span>
+
+      <h2>Key Findings</h2>
+      <ul>
+        <li>Most sites were within 100 meters of streams.</li>
+        <li>Statistically significant results (p < 0.05) show non-random site distribution.</li>
+        <li>Both projectile points and end scrapers show spatial bias near water.</li>
+        <li>Human activity was likely influenced by access to water and resources.</li>
+      </ul>
+
+      <h2>Map Layers</h2>
+      <ul>
+        <li>Elevation Raster (DEM)</li>
+        <li>Projectile Point Sites</li>
+        <li>End Scraper Sites</li>
+        <li>Clipped Stream Buffers (0–500+ m)</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
