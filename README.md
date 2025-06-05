@@ -61,3 +61,15 @@ To evaluate the relationship between stream proximity and prehistoric site locat
 
 October 2023  
 Created by: Oscar Babin
+
+---
+
+## Additional Resources
+
+For a comprehensive analysis of this study, including:
+- Detailed statistical tables and chi-square test results
+- Complete methodology documentation
+- Extended findings and interpretations
+- Additional maps and visualizations
+
+Please refer to the [full PDF report](./human_settlement_map.pdf).
